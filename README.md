@@ -7,7 +7,7 @@ Live site: _add your Vercel URL after deploying_
 ## Features
 
 - **Pages:** Home, About, Services, Skills, Projects (with a detail page per project), Contact, and a custom 404.
-- **Availability clock:** shows the current Philippine time and whether the evening shift (6:00 PM – 12:00 AM PHT) is on.
+- **Shift timeline:** a 24-hour bar that shows the evening shift (6:00 PM – 12:00 AM PHT) in the visitor's own time zone, with the current time and whether the shift is on.
 - **Honest demo projects:** each project carries a status (`planned`, `in-progress`, `completed`) shown on the site, so nothing is presented as finished before it is.
 - **Secure contact form:** server-side validation, honeypot and fill-timer spam checks, atomic rate limiting, storage in Supabase, optional email notification via Resend.
 - **SEO:** page metadata, generated Open Graph and Twitter images, `sitemap.xml`, `robots.txt`, JSON-LD structured data.
@@ -63,10 +63,10 @@ Most changes need only edits in `src/content/`. Each file has a "HOW TO EDIT" co
 **`site.ts`**
 - `email`: contact email shown on the site and in form error messages.
 - `linkedinUrl`: set to your profile URL (for example `"https://www.linkedin.com/in/your-name"`). While it is `null`, the link is hidden.
-- `shift`: `timezone`, `startHour`, `endHour` (24-hour clock) drive the availability clock; `label` is the text shown. Also update `availability` if the schedule changes.
+- `shift`: `timezone`, `startHour`, `endHour` (24-hour clock) drive the shift timeline on the home page; `label` is the text shown. Also update `availability` if the schedule changes.
 
 **`services.ts`**
-- Each entry has a `level` of `"core"` (badge "Core support") or `"advanced"` (badge "Advanced"). Change it per service as appropriate.
+- Each entry has a `level` of `"core"` (no badge) or `"advanced"` (shown with an "Advanced" badge). Change it per service as appropriate.
 - Keep `slug` stable; it is the anchor (`/services#slug`).
 
 **`projects.ts`**
