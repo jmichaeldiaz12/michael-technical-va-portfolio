@@ -41,10 +41,10 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-gh repo create michael-technical-va-portfolio --private --source=. --remote=origin --push
+gh repo create michael-technical-va-portfolio --public --source=. --remote=origin --push
 ```
 
-Use `--public` instead of `--private` if you want a public repo. Before committing, confirm `git status` does not list `.env.local`.
+The live repository is public: https://github.com/jmichaeldiaz12/michael-technical-va-portfolio. Use `--private` instead if you ever recreate it privately. Before committing, confirm `git status` does not list `.env.local`.
 
 ## 4. Vercel
 
