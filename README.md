@@ -107,6 +107,7 @@ Set these in `.env.local` locally and in Vercel project settings for deployment.
 | `RESEND_API_KEY` | No | Yes | Resend API key. Enables email notifications for new inquiries. |
 | `RESEND_FROM_EMAIL` | No | Yes | Sender, for example `Portfolio Contact <onboarding@resend.dev>`. Defaults to that value. |
 | `CONTACT_NOTIFICATION_EMAIL` | No | Yes | Address that receives notifications. Sent only if this and `RESEND_API_KEY` are both set. |
+| `CRON_SECRET` | Yes (production) | Yes | Secret that Vercel Cron sends to `/api/keep-alive`. The daily job runs a tiny query so the Supabase free plan does not pause the project after 7 idle days. At least 16 characters. |
 
 ## Security notes
 

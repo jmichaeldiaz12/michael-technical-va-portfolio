@@ -57,6 +57,7 @@ The live repository is public: https://github.com/jmichaeldiaz12/michael-technic
    | `SUPABASE_URL` | Required |
    | `SUPABASE_SECRET_KEY` | Required |
    | `RATE_LIMIT_SALT` | Required, at least 32 characters |
+   | `CRON_SECRET` | Required for the daily Supabase keep-alive; Production only is enough |
    | `RESEND_API_KEY` | Optional |
    | `RESEND_FROM_EMAIL` | Optional |
    | `CONTACT_NOTIFICATION_EMAIL` | Optional |
@@ -69,8 +70,9 @@ The live repository is public: https://github.com/jmichaeldiaz12/michael-technic
    - Open the site and click through every page.
    - Submit a test message on `/contact`.
    - Check **Table Editor**, `contact_inquiries` in Supabase for the row (and your inbox if Resend is configured).
-6. Every push to `main` deploys to production automatically; other branches and pull requests get preview deployments.
-7. Custom domain (later): Vercel project, **Settings**, **Domains**, add the domain and follow the DNS instructions. Then set `NEXT_PUBLIC_SITE_URL` to `https://yourdomain.com` (no trailing slash) and redeploy.
+6. Keep-alive: `vercel.json` schedules a daily Vercel Cron (04:00 UTC) that calls `/api/keep-alive`, which runs one tiny query so the Supabase free plan doesn't pause the project after 7 idle days. Check it under the Vercel project, **Settings**, **Cron Jobs** (you can click **Run** to test). It returns 401 unless `CRON_SECRET` is set.
+7. Every push to `main` deploys to production automatically; other branches and pull requests get preview deployments.
+8. Custom domain (later): Vercel project, **Settings**, **Domains**, add the domain and follow the DNS instructions. Then set `NEXT_PUBLIC_SITE_URL` to `https://yourdomain.com` (no trailing slash) and redeploy.
 
 ## Post-deploy checklist
 
