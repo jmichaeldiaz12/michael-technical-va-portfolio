@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0b1526;
+  --color-navy-900: #111d33;
+  --color-navy-800: #1b2a47;
+  --color-navy-700: #2a3b5c;
+
+  --color-accent-600: #2563eb;
+  --color-accent-500: #3b82f6;
+  --color-accent-400: #60a5fa;
+  --color-accent-50: #eff6ff;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fff;
+    color: var(--color-slate-700);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-slate-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+.reveal {
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+}
