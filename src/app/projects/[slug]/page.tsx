@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="t-lead mt-8">{project.description}</p>
 
         <div className="mt-12">
-          <ProjectGallery screenshots={project.screenshots} />
+          <ProjectGallery screenshots={project.screenshots} preview={project.preview} />
         </div>
 
         <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-16">

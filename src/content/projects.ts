@@ -1,5 +1,6 @@
 // HOW TO EDIT: each entry is one demo project shown on /projects and /projects/[slug].
 // `status`: "planned" | "in-progress" | "completed". Only mark "completed" once it is really built.
+// `preview` is an honest design diagram or wireframe (public/projects/<slug>/diagram.svg) shown while there are no real screenshots; it is replaced by `screenshots` once they exist.
 // Add real `screenshots` ({ src: "/projects/<slug>/<file>.png", alt } — files go in public/projects/<slug>/), `githubUrl`, and `liveUrl` when published.
 import type { Project } from "@/types";
 
@@ -36,6 +37,11 @@ export const projects: Project[] = [
       "Markdown",
     ],
     screenshots: [],
+    preview: {
+      src: "/projects/windows-troubleshooting-guide/diagram.svg",
+      alt: "Flowchart that walks through diagnosing a Windows PC with no internet, from cable and IP address checks to gateway, ping and DNS tests.",
+      caption: "Troubleshooting flowchart for the guide. Screenshots will be added when the project is published.",
+    },
     status: "planned",
   },
   {
@@ -67,6 +73,11 @@ export const projects: Project[] = [
       "Windows networking tools",
     ],
     screenshots: [],
+    preview: {
+      src: "/projects/small-office-network-setup/diagram.svg",
+      alt: "Network diagram of a small office: internet, modem, router, switch, PCs, printer, NAS and Wi-Fi access point, with an IP plan table.",
+      caption: "Network diagram for the planned office setup. Screenshots will be added when the project is published.",
+    },
     status: "planned",
   },
   {
@@ -89,6 +100,11 @@ export const projects: Project[] = [
     ],
     technologies: ["HTML", "CSS", "JavaScript", "Next.js"],
     screenshots: [],
+    preview: {
+      src: "/projects/business-website/diagram.svg",
+      alt: "Low-fidelity wireframe of a small-business homepage with header, hero, service cards, about section, contact form with map and footer.",
+      caption: "Homepage wireframe for the website. Screenshots will be added when the project is published.",
+    },
     status: "planned",
   },
   {
@@ -115,6 +131,11 @@ export const projects: Project[] = [
     // TODO: add the automation platform used (e.g., Zapier, Make, or n8n)
     technologies: ["No-code automation", "Google Forms", "Google Sheets", "Gmail"],
     screenshots: [],
+    preview: {
+      src: "/projects/business-workflow-automation/diagram.svg",
+      alt: "Workflow diagram showing a web form submission logged to Google Sheets, then emailed to the team and confirmed to the customer, with an error path.",
+      caption: "Workflow diagram for the automation. Screenshots will be added when the project is published.",
+    },
     status: "planned",
   },
 ];

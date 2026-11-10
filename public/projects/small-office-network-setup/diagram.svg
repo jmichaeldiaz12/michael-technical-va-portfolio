@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="'Segoe UI', Arial, Helvetica, sans-serif" role="img">
+  <title>Small Office Network Setup - Network diagram</title>
+  <desc>Network diagram: internet, ISP modem, router and firewall, an 8-port switch, then PCs, printer, NAS and a Wi-Fi access point, with an IP plan table.</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#586377"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2B59D9"/></marker>
+  </defs>
+  <rect width="1200" height="750" fill="#F5F6F8"/>
+  <text x="40" y="48" font-size="24" fill="#15233F" font-weight="700" text-anchor="start">Small Office Network Setup</text>
+  <text x="40" y="72" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Network diagram</text>
+  <path d="M340 160H480A38 38 0 0 0 478 100A34 34 0 0 0 430 84A36 36 0 0 0 372 90A30 30 0 0 0 340 160Z" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="410" y="135" font-size="16" fill="#15233F" font-weight="600" text-anchor="middle">Internet</text>
+  <rect x="260" y="195" width="300" height="50" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="410" y="225.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">ISP modem</text>
+  <rect x="260" y="280" width="300" height="84" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="410" y="307.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Router / firewall</text>
+  <text x="410" y="327.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">192.168.10.1</text>
+  <text x="410" y="347.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">DHCP server</text>
+  <rect x="260" y="399" width="300" height="50" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="410" y="429.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Switch, 8-port</text>
+  <path d="M410 160V195" fill="none" stroke="#2B59D9" stroke-width="2"/>
+  <path d="M410 245V280" fill="none" stroke="#2B59D9" stroke-width="2"/>
+  <path d="M410 364V399" fill="none" stroke="#2B59D9" stroke-width="2"/>
+  <path d="M410 449V490" fill="none" stroke="#586377" stroke-width="2"/>
+  <path d="M125 490H695" fill="none" stroke="#586377" stroke-width="2"/>
+  <path d="M125 490V535" fill="none" stroke="#586377" stroke-width="2"/>
+  <rect x="40" y="535" width="170" height="90" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="125" y="575.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">PC-1 … PC-4</text>
+  <text x="125" y="595.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">(DHCP)</text>
+  <path d="M315 490V535" fill="none" stroke="#586377" stroke-width="2"/>
+  <rect x="230" y="535" width="170" height="90" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="315" y="565.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Printer</text>
+  <text x="315" y="585.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">192.168.10.20</text>
+  <text x="315" y="605.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">(reserved)</text>
+  <path d="M505 490V535" fill="none" stroke="#586377" stroke-width="2"/>
+  <rect x="420" y="535" width="170" height="90" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="505" y="565.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">NAS</text>
+  <text x="505" y="585.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">192.168.10.10</text>
+  <text x="505" y="605.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">(static)</text>
+  <path d="M695 490V535" fill="none" stroke="#586377" stroke-width="2"/>
+  <rect x="610" y="535" width="170" height="90" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="695" y="575.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Wi-Fi access point</text>
+  <text x="695" y="595.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">192.168.10.2</text>
+  <path d="M695 625V670" fill="none" stroke="#586377" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="705" y="653" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Wi-Fi</text>
+  <rect x="605" y="670" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="695" y="693.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Laptops and phones</text>
+  <text x="695" y="713.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">(DHCP)</text>
+  <rect x="820" y="95" width="340" height="422" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="129" font-size="18" fill="#15233F" font-weight="700" text-anchor="start">IP plan</text>
+  <path d="M840 147H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="169" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Subnet</text>
+  <text x="840" y="191" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">192.168.10.0/24</text>
+  <path d="M840 203H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="225" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Subnet mask</text>
+  <text x="840" y="247" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">255.255.255.0</text>
+  <path d="M840 259H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="281" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Gateway</text>
+  <text x="840" y="303" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">192.168.10.1</text>
+  <path d="M840 315H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="337" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Static range</text>
+  <text x="840" y="359" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">192.168.10.2 – 192.168.10.99</text>
+  <path d="M840 371H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="393" font-size="15" fill="#586377" font-weight="400" text-anchor="start">DHCP pool</text>
+  <text x="840" y="415" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">192.168.10.100 – 192.168.10.199</text>
+  <path d="M840 427H1140" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="840" y="449" font-size="15" fill="#586377" font-weight="400" text-anchor="start">DNS</text>
+  <text x="840" y="471" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">Router, forwarding to</text>
+  <text x="840" y="492" font-size="16" fill="#15233F" font-weight="600" text-anchor="start">the ISP or 1.1.1.1</text>
+</svg>

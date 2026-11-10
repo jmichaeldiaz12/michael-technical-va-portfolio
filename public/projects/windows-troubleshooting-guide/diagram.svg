@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="'Segoe UI', Arial, Helvetica, sans-serif" role="img">
+  <title>Windows Troubleshooting Guide - Troubleshooting flowchart</title>
+  <desc>Flowchart for diagnosing no internet on a Windows PC, checking the connection, IP address, gateway, internet access and DNS in order.</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#586377"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2B59D9"/></marker>
+  </defs>
+  <rect width="1200" height="750" fill="#F5F6F8"/>
+  <text x="40" y="48" font-size="24" fill="#15233F" font-weight="700" text-anchor="start">Windows Troubleshooting Guide</text>
+  <text x="40" y="72" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Troubleshooting flowchart</text>
+  <rect x="40" y="110" width="250" height="100" rx="10" fill="#F2B544" stroke="#F2B544" stroke-width="1.5"/>
+  <text x="165" y="155.3" font-size="15" fill="#15233F" font-weight="600" text-anchor="middle">User reports</text>
+  <text x="165" y="175.3" font-size="15" fill="#15233F" font-weight="600" text-anchor="middle">no internet</text>
+  <rect x="40" y="260" width="250" height="100" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="165" y="305.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Cable plugged in or</text>
+  <text x="165" y="325.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Wi-Fi connected?</text>
+  <rect x="40" y="410" width="250" height="100" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="165" y="455.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">ipconfig shows a valid IP?</text>
+  <text x="165" y="475.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">(169.254.x.x means no)</text>
+  <rect x="40" y="560" width="250" height="100" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="165" y="605.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Can ping the</text>
+  <text x="165" y="625.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">default gateway?</text>
+  <rect x="340" y="260" width="270" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="475" y="305.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Reconnect the cable or</text>
+  <text x="475" y="325.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">join the Wi-Fi network</text>
+  <rect x="340" y="410" width="270" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="475" y="445.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Run ipconfig /release</text>
+  <text x="475" y="465.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">and /renew; check the</text>
+  <text x="475" y="485.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">router's DHCP settings</text>
+  <rect x="340" y="560" width="270" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="475" y="605.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Check router power,</text>
+  <text x="475" y="625.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">cables and switch port</text>
+  <rect x="650" y="110" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="770" y="165.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">Can ping 8.8.8.8?</text>
+  <rect x="650" y="260" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="770" y="305.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">nslookup resolves</text>
+  <text x="770" y="325.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">a website?</text>
+  <rect x="650" y="410" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="770" y="445.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">App or browser issue:</text>
+  <text x="770" y="465.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">check proxy settings,</text>
+  <text x="770" y="485.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">reset the browser</text>
+  <rect x="650" y="560" width="240" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="770" y="605.3" font-size="15" fill="#15233F" font-weight="600" text-anchor="middle">Document the fix</text>
+  <text x="770" y="625.3" font-size="15" fill="#15233F" font-weight="600" text-anchor="middle">and the cause</text>
+  <rect x="930" y="110" width="230" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="1045" y="155.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">WAN issue: restart the</text>
+  <text x="1045" y="175.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">modem, contact the ISP</text>
+  <rect x="930" y="260" width="230" height="100" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="1045" y="295.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">DNS issue: ipconfig</text>
+  <text x="1045" y="315.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">/flushdns, set DNS to</text>
+  <text x="1045" y="335.3" font-size="15" fill="#15233F" font-weight="400" text-anchor="middle">the router or 1.1.1.1</text>
+  <path d="M165 210V260" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <path d="M165 360V410" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="175" y="390" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M165 510V560" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="175" y="540" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M165 660V710H630V160H650" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="175" y="690" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M770 210V260" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="780" y="240" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M770 360V410" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="780" y="390" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M770 510V560" fill="none" stroke="#2B59D9" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="780" y="390" font-size="15" fill="#2B59D9" font-weight="600" text-anchor="start">Yes</text>
+  <path d="M290 310H340" fill="none" stroke="#586377" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="315" y="302" font-size="15" fill="#586377" font-weight="600" text-anchor="middle">No</text>
+  <path d="M290 460H340" fill="none" stroke="#586377" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="315" y="452" font-size="15" fill="#586377" font-weight="600" text-anchor="middle">No</text>
+  <path d="M290 610H340" fill="none" stroke="#586377" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="315" y="602" font-size="15" fill="#586377" font-weight="600" text-anchor="middle">No</text>
+  <path d="M890 160H930" fill="none" stroke="#586377" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="910" y="152" font-size="15" fill="#586377" font-weight="600" text-anchor="middle">No</text>
+  <path d="M890 310H930" fill="none" stroke="#586377" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="910" y="302" font-size="15" fill="#586377" font-weight="600" text-anchor="middle">No</text>
+  <rect x="930" y="420" width="230" height="120" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="948" y="450" font-size="15" fill="#15233F" font-weight="700" text-anchor="start">How to read</text>
+  <rect x="948" y="466" width="22" height="16" rx="4" fill="#FFFFFF" stroke="#2B59D9" stroke-width="2"/>
+  <text x="982" y="479" font-size="15" fill="#586377" font-weight="400" text-anchor="start">A check to make</text>
+  <rect x="948" y="492" width="22" height="16" rx="4" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <text x="982" y="505" font-size="15" fill="#586377" font-weight="400" text-anchor="start">A fix to apply</text>
+  <rect x="948" y="518" width="22" height="16" rx="4" fill="#F2B544" stroke="#F2B544"/>
+  <text x="982" y="531" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Where it starts</text>
+</svg>

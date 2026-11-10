@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="'Segoe UI', Arial, Helvetica, sans-serif" role="img">
+  <title>Business Website - Homepage wireframe</title>
+  <desc>Low-fidelity wireframe of a small-business homepage: header, hero, three service cards, about strip, contact form with map, and footer, with design notes.</desc>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#586377"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2B59D9"/></marker>
+  </defs>
+  <rect width="1200" height="750" fill="#F5F6F8"/>
+  <text x="40" y="48" font-size="24" fill="#15233F" font-weight="700" text-anchor="start">Business Website</text>
+  <text x="40" y="72" font-size="15" fill="#586377" font-weight="400" text-anchor="start">Homepage wireframe</text>
+  <rect x="40" y="100" width="760" height="620" rx="10" fill="#FFFFFF" stroke="#C9D0DB" stroke-width="1.5"/>
+  <path d="M40 140H800" stroke="#C9D0DB" stroke-width="1.5"/>
+  <circle cx="62" cy="120" r="5" fill="#C9D0DB"/>
+  <circle cx="82" cy="120" r="5" fill="#C9D0DB"/>
+  <circle cx="102" cy="120" r="5" fill="#C9D0DB"/>
+  <rect x="130" y="108" width="520" height="24" rx="12" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="60" y="152" width="90" height="30" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="330" y="163" width="64" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="420" y="163" width="64" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="510" y="163" width="64" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="600" y="163" width="64" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="690" y="152" width="90" height="30" rx="6" fill="#C9D0DB" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="70" y="222" width="300" height="18" rx="9" fill="#C9D0DB"/>
+  <rect x="70" y="250" width="240" height="18" rx="9" fill="#C9D0DB"/>
+  <rect x="70" y="288" width="320" height="10" rx="5" fill="#C9D0DB"/>
+  <rect x="70" y="306" width="280" height="10" rx="5" fill="#C9D0DB"/>
+  <rect x="70" y="330" width="120" height="30" rx="6" fill="#C9D0DB" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="470" y="210" width="300" height="150" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <path d="M470 210L770 360M770 210L470 360" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="70" y="380" width="220" height="100" rx="8" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="86" y="394" width="28" height="28" rx="6" fill="#C9D0DB"/>
+  <rect x="86" y="438" width="140" height="10" rx="5" fill="#C9D0DB"/>
+  <rect x="86" y="456" width="170" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="310" y="380" width="220" height="100" rx="8" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="326" y="394" width="28" height="28" rx="6" fill="#C9D0DB"/>
+  <rect x="326" y="438" width="140" height="10" rx="5" fill="#C9D0DB"/>
+  <rect x="326" y="456" width="170" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="550" y="380" width="220" height="100" rx="8" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="566" y="394" width="28" height="28" rx="6" fill="#C9D0DB"/>
+  <rect x="566" y="438" width="140" height="10" rx="5" fill="#C9D0DB"/>
+  <rect x="566" y="456" width="170" height="8" rx="4" fill="#C9D0DB"/>
+  <rect x="70" y="495" width="160" height="80" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <path d="M70 495L230 575M230 495L70 575" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="260" y="505" width="360" height="14" rx="7" fill="#C9D0DB"/>
+  <rect x="260" y="531" width="500" height="9" rx="4.5" fill="#C9D0DB"/>
+  <rect x="260" y="549" width="460" height="9" rx="4.5" fill="#C9D0DB"/>
+  <rect x="70" y="590" width="330" height="26" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="70" y="624" width="330" height="26" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="70" y="658" width="110" height="26" rx="6" fill="#C9D0DB" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="430" y="590" width="340" height="94" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  <path d="M430 590L770 684M770 590L430 684" stroke="#C9D0DB" stroke-width="1.5"/>
+  <rect x="60" y="692" width="720" height="20" rx="4" fill="#E6EAF0" stroke="#C9D0DB" stroke-width="1.5"/>
+  
+  <path d="M770 285H855" stroke="#2B59D9" stroke-width="1.5"/><circle cx="770" cy="285" r="4" fill="#2B59D9"/>
+  <text x="870" y="280.1" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">Clear headline and</text>
+  <text x="870" y="301.1" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">call to action</text>
+  <path d="M770 430H855" stroke="#2B59D9" stroke-width="1.5"/><circle cx="770" cy="430" r="4" fill="#2B59D9"/>
+  <text x="870" y="435.6" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">Services at a glance</text>
+  <path d="M770 535H855" stroke="#2B59D9" stroke-width="1.5"/><circle cx="770" cy="535" r="4" fill="#2B59D9"/>
+  <text x="870" y="530.1" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">Mobile layout stacks</text>
+  <text x="870" y="551.1" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">these sections</text>
+  <path d="M770 640H855" stroke="#2B59D9" stroke-width="1.5"/><circle cx="770" cy="640" r="4" fill="#2B59D9"/>
+  <text x="870" y="645.6" font-size="16" fill="#2B59D9" font-weight="600" text-anchor="start">Contact form and map</text>
+</svg>

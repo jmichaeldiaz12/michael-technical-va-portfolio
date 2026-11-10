@@ -47,6 +47,8 @@ export interface Project {
   features: string[];
   technologies: string[];
   screenshots: { src: string; alt: string }[];
+  // Design diagram/wireframe shown before real screenshots exist.
+  preview?: { src: string; alt: string; caption: string };
   githubUrl?: string;
   liveUrl?: string;
   status: ProjectStatus;
