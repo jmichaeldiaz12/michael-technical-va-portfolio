@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #0b1526;
-  --color-navy-900: #111d33;
-  --color-navy-800: #1b2a47;
-  --color-navy-700: #2a3b5c;
+  --color-paper: #f5f6f8;
+  --color-surface: #ffffff;
+  --color-ink: #15233f;
+  --color-body: #2a3650;
+  --color-muted: #586377;
+  --color-rule: #dce1e8;
+  --color-signal: #2b59d9;
+  --color-signal-hover: #2349b8;
+  --color-lamp: #f2b544;
+  --color-lamp-soft: #fcefd2;
+  --color-error: #b42318;
 
-  --color-accent-600: #2563eb;
-  --color-accent-500: #3b82f6;
-  --color-accent-400: #60a5fa;
-  --color-accent-50: #eff6ff;
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --text-s1: 1.125rem;
+  --text-s2: 1.25rem;
+  --text-s3: 1.563rem;
+  --text-s4: 1.953rem;
+  --text-s5: 2.441rem;
+
+  --radius-button: 10px;
+  --radius-block: 20px;
 }
 
 @layer base {
@@ -21,8 +31,10 @@
   }
 
   body {
-    background-color: #fff;
-    color: var(--color-slate-700);
+    background-color: var(--color-paper);
+    color: var(--color-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
   }
 
   h1,
@@ -31,11 +43,11 @@
   h4,
   h5,
   h6 {
-    color: var(--color-slate-900);
+    color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent-500);
+    outline: 2px solid var(--color-signal);
     outline-offset: 2px;
   }
 
@@ -53,18 +65,68 @@
   }
 }
 
-.reveal {
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+@layer components {
+  .t-display {
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    max-width: 14ch;
+  }
+
+  .t-page {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  .t-h2 {
+    font-size: clamp(1.75rem, 3.2vw, 2.441rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .t-lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    max-width: 68ch;
+  }
 }
 
-.reveal[data-reveal="hidden"] {
-  opacity: 0;
-  transform: translateY(16px);
+/* The shift segment grows from zero width once, when the band mounts. */
+@keyframes grow-w {
+  from {
+    width: 0;
+  }
 }
 
-.reveal[data-reveal="shown"] {
-  opacity: 1;
-  transform: none;
+.shift-grow {
+  animation: grow-w 300ms ease-out;
+}
+
+/* Fluid spacing: scales smoothly with the viewport instead of jumping at breakpoints. */
+@utility section-y {
+  padding-block: clamp(2.5rem, 1.25rem + 4vw, 4.5rem);
+}
+@utility section-pb {
+  padding-bottom: clamp(2.5rem, 1.25rem + 4vw, 4.5rem);
+}
+@utility hero-y {
+  padding-top: clamp(2rem, 1rem + 3.5vw, 4rem);
+  padding-bottom: clamp(2rem, 1rem + 3vw, 4rem);
+}
+@utility page-head-y {
+  padding-top: clamp(2rem, 1rem + 3.5vw, 4rem);
+  padding-bottom: clamp(1.75rem, 1rem + 2.5vw, 3rem);
+}
+@utility stack-lg {
+  margin-top: clamp(2rem, 1.25rem + 2.5vw, 3.5rem);
+}
+@utility gutter-x {
+  padding-inline: clamp(1rem, 0.5rem + 3vw, 3rem);
+}
+@utility block-pad {
+  padding: clamp(1.5rem, 0.75rem + 4vw, 4rem);
 }

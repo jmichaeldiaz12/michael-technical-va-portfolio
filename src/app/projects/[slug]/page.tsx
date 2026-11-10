@@ -34,71 +34,70 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!project) notFound();
 
   const hasLinks = Boolean(project.githubUrl || project.liveUrl);
+  const statusVariant =
+    project.status === "completed" ? "solid" : project.status === "planned" ? "lamp" : "outline";
 
   return (
-    <article className="bg-white py-16 sm:py-20">
+    <article className="pb-24 pt-10 md:pb-32 md:pt-14">
       <Container className="max-w-4xl">
         <Link
           href="/projects"
-          className="inline-flex min-h-11 items-center gap-1 text-sm font-medium text-accent-600 hover:text-accent-500"
+          className="inline-flex min-h-11 items-center gap-2 font-semibold text-signal underline underline-offset-4 hover:text-signal-hover"
         >
           <ArrowLeft size={16} aria-hidden="true" />
           Back to projects
         </Link>
-        <div className="mt-6 flex flex-wrap gap-2">
-          <Badge variant="outline">Personal Project</Badge>
-          <Badge variant={project.status === "completed" ? "accent" : "neutral"}>
-            {statusLabels[project.status]}
-          </Badge>
+        <h1 className="t-page mt-6">{project.title}</h1>
+        <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <Badge variant={statusVariant}>{statusLabels[project.status]}</Badge>
+          <p className="text-muted">
+            Personal project in {project.category.toLowerCase()}
+          </p>
         </div>
-        <p className="mt-4 font-mono text-xs uppercase tracking-wider text-accent-600">
-          {project.category}
-        </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{project.title}</h1>
-        <p className="mt-6 text-lg leading-relaxed text-slate-600">{project.description}</p>
+        <p className="t-lead mt-8">{project.description}</p>
 
-        <div className="mt-10">
+        <div className="mt-12">
           <ProjectGallery screenshots={project.screenshots} />
         </div>
 
-        <section className="mt-12" aria-labelledby="objectives">
-          <h2 id="objectives" className="text-2xl font-bold">
-            Objectives
-          </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600 marker:text-accent-600">
-            {project.objectives.map((o) => (
-              <li key={o}>{o}</li>
-            ))}
-          </ul>
-        </section>
+        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-16">
+          <section aria-labelledby="objectives">
+            <h2 id="objectives" className="text-s3 font-bold">
+              Objectives
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 marker:text-muted">
+              {project.objectives.map((o) => (
+                <li key={o}>{o}</li>
+              ))}
+            </ul>
+          </section>
 
-        <section className="mt-12" aria-labelledby="features">
-          <h2 id="features" className="text-2xl font-bold">
-            {project.status === "completed" ? "Key features" : "Planned features"}
-          </h2>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-600 marker:text-accent-600">
-            {project.features.map((f) => (
-              <li key={f}>{f}</li>
-            ))}
-          </ul>
-        </section>
+          <section aria-labelledby="features">
+            <h2 id="features" className="text-s3 font-bold">
+              {project.status === "completed" ? "Key features" : "Planned features"}
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 marker:text-muted">
+              {project.features.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
 
-        <section className="mt-12" aria-labelledby="technologies">
-          <h2 id="technologies" className="text-2xl font-bold">
+        <section className="mt-16" aria-labelledby="technologies">
+          <h2 id="technologies" className="text-s3 font-bold">
             Technologies
           </h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {project.technologies.map((t) => (
               <li key={t}>
-                <Badge variant="neutral" className="px-3 py-1 text-sm">
-                  {t}
-                </Badge>
+                <Badge>{t}</Badge>
               </li>
             ))}
           </ul>
         </section>
 
-        <div className="mt-12 border-t border-slate-200 pt-8">
+        <div className="mt-16 border-t border-rule pt-8">
           {hasLinks ? (
             <div className="flex flex-col gap-3 sm:flex-row">
               {project.githubUrl && (
@@ -115,9 +114,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               )}
             </div>
           ) : (
-            <p className="text-sm text-slate-500">
-              Repository and live demo will be linked when published.
-            </p>
+            <p className="text-muted">Repository and live demo will be linked when published.</p>
           )}
         </div>
       </Container>

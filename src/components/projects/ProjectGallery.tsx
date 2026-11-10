@@ -14,7 +14,7 @@ export default function ProjectGallery({ screenshots }: { screenshots: Project["
           width={1200}
           height={750}
           sizes="(min-width: 640px) 50vw, 100vw"
-          className="h-auto w-full rounded-xl border border-slate-200"
+          className="h-auto w-full rounded-block border border-rule"
         />
       ))}
     </div>

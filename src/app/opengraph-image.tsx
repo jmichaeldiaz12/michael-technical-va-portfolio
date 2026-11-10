@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/content/site";
 
-export const alt = `${siteConfig.name} — ${siteConfig.title}`;
+export const alt = `${siteConfig.name} - ${siteConfig.title}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,53 +15,55 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0B1526",
+          background: "#15233F",
           padding: 80,
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: 64,
-              height: 64,
-              borderRadius: 14,
-              background: "#111D33",
-              border: "2px solid #2563EB",
-              color: "#ffffff",
-              fontSize: 26,
-              fontWeight: 700,
-              fontFamily: "monospace",
-            }}
-          >
-            JMD
-          </div>
-          <div style={{ marginLeft: 20, color: "#ffffff", fontSize: 32, fontWeight: 600 }}>
-            {siteConfig.name}
-          </div>
+        <div style={{ display: "flex", color: "#ffffff", fontSize: 34, fontWeight: 700 }}>
+          {siteConfig.name}
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
               color: "#ffffff",
-              fontSize: 84,
-              fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: -2,
-              maxWidth: 1000,
+              fontSize: 88,
+              fontWeight: 800,
+              lineHeight: 1.04,
+              letterSpacing: -3,
+              maxWidth: 900,
             }}
           >
-            Technical Support You Can Rely On.
+            Technical support you can rely on.
           </div>
-          <div style={{ marginTop: 28, color: "#CBD5E1", fontSize: 34 }}>
-            Technical Virtual Assistant · IT Support Specialist
+          <div style={{ marginTop: 28, color: "#DCE1E8", fontSize: 34 }}>
+            Technical virtual assistant and IT support specialist
           </div>
         </div>
-        <div style={{ display: "flex", color: "#60A5FA", fontSize: 28 }}>
-          Part-time · Evening Shift (PHT) · Remote
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              width: 480,
+              height: 16,
+              borderRadius: 8,
+              background: "rgba(255,255,255,0.14)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                marginLeft: 360,
+                width: 120,
+                height: 16,
+                borderRadius: 8,
+                background: "#F2B544",
+              }}
+            />
+          </div>
+          <div style={{ display: "flex", marginTop: 20, color: "#ffffff", fontSize: 28 }}>
+            Part-time, evenings Philippine time
+          </div>
         </div>
       </div>
     ),

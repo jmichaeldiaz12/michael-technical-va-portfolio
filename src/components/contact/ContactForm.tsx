@@ -12,10 +12,12 @@ import {
 const FIELD_ORDER: (keyof ContactInput)[] = ["name", "email", "subject", "message"];
 const MESSAGE_MAX = 5000;
 
-const inputClass =
-  "mt-1.5 block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-slate-900 placeholder:text-slate-400 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/30 aria-[invalid=true]:border-red-600";
-const labelClass = "block text-sm font-medium text-slate-900";
-const errorClass = "mt-1.5 text-sm text-red-600";
+const inputBase =
+  "mt-1.5 block w-full rounded-button border border-[#8792a6] bg-surface px-3.5 text-ink placeholder:text-muted focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal aria-[invalid=true]:border-error";
+const inputClass = `${inputBase} h-12`;
+const textareaClass = `${inputBase} py-3`;
+const labelClass = "block text-[0.9375rem] font-semibold text-ink";
+const errorClass = "mt-1.5 text-sm text-error";
 
 const initialState: ContactFormState = { status: "idle" };
 
@@ -48,21 +50,21 @@ function ContactFormInner({ onReset }: { onReset: () => void }) {
     return (
       <div
         role="status"
-        className="mt-5 rounded-lg border border-green-200 bg-green-50 p-6 text-center"
+        className="mt-5 rounded-block border border-rule bg-paper p-6 text-center"
       >
-        <CheckCircle2 size={36} className="mx-auto text-green-600" aria-hidden="true" />
+        <CheckCircle2 size={36} className="mx-auto text-green-700" aria-hidden="true" />
         <h3
           ref={headingRef}
           tabIndex={-1}
-          className="mt-3 text-lg font-semibold text-slate-900 focus:outline-none"
+          className="mt-3 text-s2 font-bold text-ink focus:outline-none"
         >
           Message sent
         </h3>
-        <p className="mt-2 text-slate-700">{state.message}</p>
+        <p className="mt-2 text-body">{state.message}</p>
         <button
           type="button"
           onClick={onReset}
-          className="mt-5 inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-50"
+          className="mt-5 inline-flex h-12 items-center justify-center rounded-button border-[1.5px] border-ink/20 bg-transparent px-5 font-semibold text-ink transition-colors hover:border-ink/50"
         >
           Send another message
         </button>
@@ -224,17 +226,17 @@ function ContactFormInner({ onReset }: { onReset: () => void }) {
           aria-describedby={
             [describedBy("message"), "contact-message-count"].filter(Boolean).join(" ")
           }
-          className={inputClass}
+          className={textareaClass}
         />
         <div className="mt-1.5 flex items-start justify-between gap-4">
           <div>
             {errors.message && (
-              <p id="contact-message-error" className="text-sm text-red-600">
+              <p id="contact-message-error" className="text-sm text-error">
                 {errors.message}
               </p>
             )}
           </div>
-          <p id="contact-message-count" className="shrink-0 text-sm text-slate-500">
+          <p id="contact-message-count" className="shrink-0 text-sm text-muted">
             {messageLength} / {MESSAGE_MAX}
           </p>
         </div>
@@ -257,7 +259,7 @@ function ContactFormInner({ onReset }: { onReset: () => void }) {
       {showBanner && (
         <div
           role="alert"
-          className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-3.5 text-sm text-red-700"
+          className="flex items-start gap-3 rounded-button border border-error/30 bg-red-50 p-3.5 text-sm text-error"
         >
           <AlertCircle size={18} className="mt-0.5 shrink-0" aria-hidden="true" />
           <p>{bannerMessage}</p>
@@ -269,7 +271,7 @@ function ContactFormInner({ onReset }: { onReset: () => void }) {
           type="submit"
           disabled={isPending}
           aria-busy={isPending}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-600 px-6 py-3 font-medium text-white transition-colors hover:bg-accent-500 disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-button bg-signal px-5 font-semibold text-white transition-colors hover:bg-signal-hover disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isPending ? (
             <>
@@ -280,7 +282,7 @@ function ContactFormInner({ onReset }: { onReset: () => void }) {
             "Send message"
           )}
         </button>
-        <p className="mt-3 text-sm text-slate-500">
+        <p className="mt-3 text-sm text-muted">
           Your details are only used to reply to your inquiry.
         </p>
       </div>

@@ -1,8 +1,6 @@
-import Link from "next/link";
 import { cacheLife } from "next/cache";
-import { Clock, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { navItems } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
 
 function GithubIcon() {
@@ -22,70 +20,43 @@ function LinkedinIcon() {
 }
 
 const linkClass =
-  "inline-flex min-h-8 items-center gap-2 text-sm text-slate-300 transition-colors hover:text-white";
+  "inline-flex min-h-11 items-center gap-2 text-[0.9375rem] text-body transition-colors hover:text-signal";
 
 export default async function Footer() {
   "use cache";
   cacheLife("days");
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-navy-950 text-slate-300">
-      <Container className="grid gap-10 py-12 md:grid-cols-3">
-        <div>
-          <p className="text-lg font-semibold text-white">{siteConfig.name}</p>
-          <p className="mt-1 text-sm text-slate-300">{siteConfig.title}</p>
-          <p className="mt-4 text-sm leading-relaxed text-slate-400">{siteConfig.tagline}</p>
-        </div>
-        <nav aria-label="Footer">
-          <h2 className="font-mono text-xs uppercase tracking-wider text-slate-400">Navigation</h2>
-          <ul className="mt-4 space-y-1">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className={linkClass}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div>
-          <h2 className="font-mono text-xs uppercase tracking-wider text-slate-400">Get in touch</h2>
-          <ul className="mt-4 space-y-1">
+    // Kept deliberately small: page links live in the header and contact details
+    // are in the contact banner just above, so the footer only signs off.
+    <footer className="border-t border-rule bg-paper">
+      <Container className="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-muted">
+          © {year} {siteConfig.name}. Based in the Philippines.
+        </p>
+        <ul className="flex flex-wrap items-center gap-x-6">
+          <li>
+            <a href={`mailto:${siteConfig.email}`} className={linkClass}>
+              <Mail aria-hidden="true" size={16} />
+              Email
+            </a>
+          </li>
+          <li>
+            <a href={siteConfig.githubUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              <GithubIcon />
+              GitHub
+            </a>
+          </li>
+          {siteConfig.linkedinUrl !== null && (
             <li>
-              <a href={`mailto:${siteConfig.email}`} className={linkClass}>
-                <Mail aria-hidden="true" size={16} />
-                {siteConfig.email}
+              <a href={siteConfig.linkedinUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                <LinkedinIcon />
+                LinkedIn
               </a>
             </li>
-            <li>
-              <a href={siteConfig.githubUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                <GithubIcon />
-                GitHub
-              </a>
-            </li>
-            {siteConfig.linkedinUrl !== null && (
-              <li>
-                <a href={siteConfig.linkedinUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                  <LinkedinIcon />
-                  LinkedIn
-                </a>
-              </li>
-            )}
-          </ul>
-          <p className="mt-4 inline-flex items-center gap-2 text-sm text-slate-300">
-            <Clock aria-hidden="true" size={16} />
-            Available {siteConfig.shift.label}
-          </p>
-        </div>
+          )}
+        </ul>
       </Container>
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {year} {siteConfig.name}. All rights reserved.
-          </p>
-          <p>Based in the Philippines · Working remotely worldwide</p>
-        </Container>
-      </div>
     </footer>
   );
 }

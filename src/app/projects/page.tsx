@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Info } from "lucide-react";
 import Container from "@/components/ui/Container";
-import Reveal from "@/components/Reveal";
-import ProjectCard from "@/components/projects/ProjectCard";
+import PageHeader from "@/components/ui/PageHeader";
+import ProjectRow from "@/components/projects/ProjectRow";
 import { getAllProjects } from "@/content/projects";
 
 export const metadata: Metadata = {
@@ -15,29 +14,26 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const projects = getAllProjects();
   return (
-    <section className="bg-white py-16 sm:py-20">
-      <Container>
-        <p className="font-mono text-xs uppercase tracking-wider text-accent-600">{"// projects"}</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Projects</h1>
+    <>
+      <PageHeader title="Projects">
         <div
           role="note"
-          className="mt-8 flex max-w-3xl items-start gap-3 rounded-xl border border-accent-600/30 bg-accent-50 p-4 text-slate-700"
+          className="mt-8 max-w-3xl rounded-xl border border-lamp bg-lamp-soft p-5 text-ink"
         >
-          <Info size={20} className="mt-0.5 shrink-0 text-accent-600" aria-hidden="true" />
-          <p>
-            These are personal demonstration projects built to show practical skills — not paid
-            client work.
-          </p>
+          These are personal demonstration projects built to show practical skills, not paid
+          client work.
         </div>
-        <h2 className="sr-only">Demonstration projects</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {projects.map((p, i) => (
-            <Reveal key={p.slug} delay={(i % 2) * 80}>
-              <ProjectCard project={p} />
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </section>
+      </PageHeader>
+      <section className="section-pb">
+        <Container>
+          <h2 className="sr-only">Demonstration projects</h2>
+          <ul className="border-t border-rule">
+            {projects.map((p) => (
+              <ProjectRow key={p.slug} project={p} />
+            ))}
+          </ul>
+        </Container>
+      </section>
+    </>
   );
 }

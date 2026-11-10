@@ -1,13 +1,12 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type BadgeVariant = "neutral" | "accent" | "outline" | "dark";
+type BadgeVariant = "outline" | "lamp" | "solid";
 
 const variants: Record<BadgeVariant, string> = {
-  neutral: "bg-slate-100 text-slate-700",
-  accent: "bg-accent-50 text-accent-600",
-  outline: "border border-slate-300 text-slate-700",
-  dark: "bg-white/10 text-slate-200 border border-white/15",
+  outline: "border border-rule bg-transparent text-ink",
+  lamp: "border border-lamp-soft bg-lamp-soft text-ink",
+  solid: "border border-ink bg-ink text-white",
 };
 
 interface BadgeProps {
@@ -16,11 +15,11 @@ interface BadgeProps {
   className?: string;
 }
 
-export default function Badge({ children, variant = "neutral", className }: BadgeProps) {
+export default function Badge({ children, variant = "outline", className }: BadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
+        "inline-flex items-center rounded-full px-3 py-1 text-sm font-medium leading-snug",
         variants[variant],
         className,
       )}

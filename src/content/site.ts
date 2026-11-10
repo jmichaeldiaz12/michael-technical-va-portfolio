@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
   tagline:
     "Reliable Technical Support. Practical IT Solutions. Dependable Remote Assistance.",
   location: "Philippines",
-  availability: "Part-time · Evening Shift · Philippine Time",
+  availability: "Part-time, evenings Philippine time",
   email: "jmichaeldiaz12@gmail.com",
   githubUrl: "https://github.com/jmichaeldiaz12",
   // TODO: add LinkedIn profile URL — link is hidden while null

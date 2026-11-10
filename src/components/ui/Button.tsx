@@ -2,18 +2,18 @@ import Link from "next/link";
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "ghostDark";
+type Variant = "primary" | "secondary" | "onDark";
 type Size = "sm" | "md";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent-600 text-white hover:bg-accent-500",
-  secondary: "bg-white text-slate-900 border border-slate-300 hover:bg-slate-50",
-  ghostDark: "border border-white/20 text-white hover:bg-white/10",
+  primary: "bg-signal text-white hover:bg-signal-hover",
+  secondary: "border-[1.5px] border-ink/20 bg-transparent text-ink hover:border-ink/50",
+  onDark: "bg-white text-ink hover:bg-paper focus-visible:outline-white",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-base",
+  sm: "h-11 px-4 text-[0.9375rem]",
+  md: "h-12 px-5 text-base",
 };
 
 interface ButtonLinkProps extends ComponentProps<typeof Link> {
@@ -30,7 +30,7 @@ export function ButtonLink({
   return (
     <Link
       className={cn(
-        "inline-flex items-center justify-center rounded-lg font-medium transition-colors",
+        "inline-flex items-center justify-center rounded-button font-semibold transition-colors",
         variants[variant],
         sizes[size],
         className,

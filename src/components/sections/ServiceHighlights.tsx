@@ -1,44 +1,37 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
-import Reveal from "@/components/Reveal";
 import { services } from "@/content/services";
 
 export default function ServiceHighlights() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-20">
-      <Container>
-        <Reveal>
-          <SectionHeading
-            eyebrow="services"
-            title="How I can help"
-            lead="Six areas of remote technical support, delivered during my evening shift."
-          />
-        </Reveal>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => {
-            const Icon = s.icon;
-            return (
-              <Reveal key={s.slug} delay={(i % 3) * 80}>
-                <Link
-                  href={`/services#${s.slug}`}
-                  className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 transition hover:border-accent-600 hover:shadow-sm"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
-                    <Icon size={20} aria-hidden="true" />
-                  </span>
-                  <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.summary}</p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-accent-600">
-                    Learn more
-                    <ArrowRight size={16} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
-              </Reveal>
-            );
-          })}
+    <section className="bg-surface section-y">
+      <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-4">
+          <div className="lg:sticky lg:top-24">
+            <h2 className="t-h2">How I can help</h2>
+            <p className="mt-4 text-body">
+              Six areas of remote technical support, delivered during my evening shift.
+            </p>
+            <Link
+              href="/services"
+              className="mt-4 inline-flex min-h-11 items-center font-semibold text-signal underline underline-offset-4 hover:text-signal-hover"
+            >
+              See all services
+            </Link>
+          </div>
         </div>
+        <ul className="border-t border-rule lg:col-span-8">
+          {services.map((s) => (
+            <li key={s.slug} className="border-b border-rule">
+              <Link href={`/services#${s.slug}`} className="group block py-6">
+                <h3 className="text-s2 font-bold transition-colors group-hover:text-signal">
+                  {s.title}
+                </h3>
+                <p className="mt-1 max-w-[60ch] text-body">{s.summary}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   );

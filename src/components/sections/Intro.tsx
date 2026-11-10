@@ -1,7 +1,5 @@
 import Container from "@/components/ui/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
 import Badge from "@/components/ui/Badge";
-import Reveal from "@/components/Reveal";
 
 const specializations = [
   "Windows support",
@@ -14,11 +12,11 @@ const specializations = [
 
 export default function Intro() {
   return (
-    <section className="bg-white py-16 sm:py-20">
-      <Container>
-        <Reveal>
-          <SectionHeading eyebrow="introduction" title="Practical IT help, from a remote desk in the Philippines" />
-          <div className="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed text-slate-600">
+    <section className="section-y">
+      <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+        <h2 className="t-h2 lg:col-span-5">Practical IT help from the Philippines</h2>
+        <div className="lg:col-span-7">
+          <div className="max-w-[68ch] space-y-4">
             <p>
               I&apos;m John Michael Diaz, an IT professional based in the Philippines, now offering
               part-time remote technical support. I help small businesses and growing teams keep
@@ -29,16 +27,14 @@ export default function Intro() {
               did in plain language.
             </p>
           </div>
-          <ul className="mt-6 flex flex-wrap gap-2" aria-label="Specializations">
+          <ul className="mt-8 flex flex-wrap gap-2" aria-label="Specializations">
             {specializations.map((s) => (
               <li key={s}>
-                <Badge variant="accent" className="px-3 py-1 text-sm">
-                  {s}
-                </Badge>
+                <Badge>{s}</Badge>
               </li>
             ))}
           </ul>
-        </Reveal>
+        </div>
       </Container>
     </section>
   );

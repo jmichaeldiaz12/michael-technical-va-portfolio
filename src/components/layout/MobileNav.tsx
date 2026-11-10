@@ -50,16 +50,16 @@ export default function MobileNav({ items }: { items: NavItem[] }) {
         aria-controls={panelId}
         aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => (open ? close() : setOpen(true))}
-        className="flex h-11 w-11 items-center justify-center rounded-lg text-slate-900 hover:bg-slate-100"
+        className="flex h-11 w-11 items-center justify-center rounded-button text-ink hover:bg-paper"
       >
         {open ? <X aria-hidden="true" size={24} /> : <Menu aria-hidden="true" size={24} />}
       </button>
       <div
         id={panelId}
         hidden={!open}
-        className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-slate-200 bg-white shadow-lg"
+        className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-rule bg-surface"
       >
-        <nav aria-label="Mobile" className="px-4 py-4 sm:px-6">
+        <nav aria-label="Mobile" className="gutter-x pb-6 pt-2">
           <ul className="flex flex-col">
             {items.map((item) => {
               const active = isActive(pathname, item.href);
@@ -70,10 +70,10 @@ export default function MobileNav({ items }: { items: NavItem[] }) {
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "flex min-h-11 items-center rounded-lg px-3 text-base font-medium",
+                      "flex min-h-14 items-center border-b border-rule text-s2 font-semibold",
                       active
-                        ? "bg-accent-50 text-slate-900"
-                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-900",
+                        ? "text-ink underline decoration-signal decoration-2 underline-offset-8"
+                        : "text-muted hover:text-ink",
                     )}
                   >
                     {item.label}
@@ -83,7 +83,7 @@ export default function MobileNav({ items }: { items: NavItem[] }) {
             })}
           </ul>
           <ButtonLink href="/contact" onClick={() => setOpen(false)} className="mt-4 w-full">
-            Hire Me
+            Hire me
           </ButtonLink>
         </nav>
       </div>
